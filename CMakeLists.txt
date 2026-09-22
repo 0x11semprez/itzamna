@@ -15,6 +15,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_library(
     itzamna_stdlib STATIC
 
+    stdlib/src/linuxsys/read.c
     stdlib/src/linuxsys/write.c
 )
 
