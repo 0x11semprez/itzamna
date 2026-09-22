@@ -1,6 +1,4 @@
-#include "../../include/linuxsys/write.h"
-
-#include <sys/syscall.h>
+#include "../../include/syscstd.h"
 
 ssize_t write(int descriptors, const void *buf, size_t nbytes)
 {
