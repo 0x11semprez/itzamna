@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/logo.png" alt="ITZAMNA" width="400"></p>
+<p align="center"><img src="docs/logo.png" alt="ITZAMNA" width="600"></p>
 
 itzamna is a system VM designed to safely execute and test critical or potentially dangerous code in CI pipelines and CTF environments.<br/>
 itzamna supports its own virtual machine, written from scratch in C.<br/>
