@@ -21,3 +21,6 @@ CMakeUserPresets.json
 # Build output and editor caches
 build/
 .cache/
+
+# Stray compiler output
+a.out
