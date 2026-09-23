@@ -4,6 +4,7 @@ add_library(
 
     src/unistd/read.c
     src/unistd/write.c
+    src/string/strlen.c
     src/string/string.c
 )
 

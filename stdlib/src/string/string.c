@@ -21,13 +21,3 @@ void putnbr(ssize_t n)
     c = u % 10 + '0';
     itz_write(1, &c, 1);
 }
-
-size_t strlen(const char str[])
-{
-    size_t counter_of_char = 0;
-    while (str[counter_of_char] != '\0') {
-        counter_of_char++;
-    }
-
-    return counter_of_char;
-}

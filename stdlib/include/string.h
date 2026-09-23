@@ -7,7 +7,6 @@
 
 LIB_EXPORT_BEGIN
 void putnbr(ssize_t n);
-size_t strlen(const char str[]);
 LIB_EXPORT_END
 
 #endif
