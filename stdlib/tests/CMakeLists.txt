@@ -10,3 +10,5 @@ function(itz_add_test name)
     target_include_directories(${name} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
     add_test(NAME ${name} COMMAND ${name})
 endfunction()
+
+itz_add_test(test_unistd)
