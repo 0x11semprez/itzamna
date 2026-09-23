@@ -6,18 +6,19 @@
 
 void putnbr(ssize_t n)
 {
+    size_t u = (size_t)n;
     char c;
 
     if (n < 0) {
         write(1, "-", 1);
-        n = -n;
+        u = -u;
     }
 
-    if (n >= 10) {
-        n /= 10;
+    if (u >= 10) {
+        putnbr((ssize_t)(u / 10));
     }
 
-    c = n % 10 + '0';
+    c = u % 10 + '0';
     write(1, &c, 1);
 }
 
