@@ -17,6 +17,6 @@ void test_read(int descriptor, void *buf, size_t nbytes)
 int main()
 {
     char c;
-    test_read(1, &c, 1);
+    test_read(0, &c, 1);
     cout << c << endl;
 }
