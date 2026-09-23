@@ -2,7 +2,7 @@
 
 #include <sys/types.h>
 
-#include "../../include/syscstd.h"
+#include <itzamna/unistd.h>
 
 void putnbr(ssize_t n)
 {
@@ -10,7 +10,7 @@ void putnbr(ssize_t n)
     char c;
 
     if (n < 0) {
-        write(1, "-", 1);
+        itz_write(1, "-", 1);
         u = -u;
     }
 
@@ -19,7 +19,7 @@ void putnbr(ssize_t n)
     }
 
     c = u % 10 + '0';
-    write(1, &c, 1);
+    itz_write(1, &c, 1);
 }
 
 size_t strlen(const char str[])

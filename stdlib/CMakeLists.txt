@@ -2,8 +2,8 @@
 add_library(
     itzamna_stdlib STATIC
 
-    src/syscstd/read.c
-    src/syscstd/write.c
+    src/unistd/read.c
+    src/unistd/write.c
     src/string/string.c
 )
 
@@ -12,6 +12,8 @@ target_include_directories(
 
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
 if(CMAKE_C_COMPILER_ID MATCHES "GNU|Clang")
