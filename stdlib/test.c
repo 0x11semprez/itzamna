@@ -6,8 +6,9 @@
 int main(void)
 {
     char c[] = "ifijrfr";
-    int da = strlen(c);
+    size_t da = strlen(c);
 
-    write(1, &da, 1);
+    putnbr(da);
+    write(1, "\n", 1);
     return 0;
 }
