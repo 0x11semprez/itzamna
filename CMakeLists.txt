@@ -11,29 +11,4 @@ set(CMAKE_C_STANDARD 17)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# Minimal libc replacement: raw Linux syscalls, no glibc wrappers.
-add_library(
-    itzamna_stdlib STATIC
-
-    stdlib/src/syscstd/read.c
-    stdlib/src/syscstd/write.c
-    stdlib/src/string/string.c
-)
-
-target_include_directories(
-    itzamna_stdlib
-
-    PUBLIC
-        ${PROJECT_SOURCE_DIR}/stdlib/include
-)
-
-if(CMAKE_C_COMPILER_ID MATCHES "GNU|Clang")
-    target_compile_options(
-        itzamna_stdlib
-
-        PRIVATE
-            -Wall
-            -Wextra
-            -Wpedantic
-    )
-endif()
+add_subdirectory(stdlib)
