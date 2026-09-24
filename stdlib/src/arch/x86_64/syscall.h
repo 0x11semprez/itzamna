@@ -12,10 +12,7 @@ static inline long itz_syscall1(long n, long a1)
 {
     long ret;
 
-    __asm__ volatile("syscall"
-                     : "=a"(ret)
-                     : "a"(n), "D"(a1)
-                     : "rcx", "r11", "memory");
+    __asm__ volatile("syscall" : "=a"(ret) : "a"(n), "D"(a1) : "rcx", "r11", "memory");
     return ret;
 }
 
@@ -23,10 +20,7 @@ static inline long itz_syscall2(long n, long a1, long a2)
 {
     long ret;
 
-    __asm__ volatile("syscall"
-                     : "=a"(ret)
-                     : "a"(n), "D"(a1), "S"(a2)
-                     : "rcx", "r11", "memory");
+    __asm__ volatile("syscall" : "=a"(ret) : "a"(n), "D"(a1), "S"(a2) : "rcx", "r11", "memory");
     return ret;
 }
 

@@ -1,9 +1,8 @@
 #ifndef ITZAMNA_IO_H
 #define ITZAMNA_IO_H
 
-#include <sys/types.h>
-
 #include <itzamna/export.h>
+#include <sys/types.h>
 
 ITZ_BEGIN_DECLS
 
