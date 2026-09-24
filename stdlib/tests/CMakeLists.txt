@@ -13,3 +13,4 @@ endfunction()
 
 itz_add_test(test_unistd)
 itz_add_test(test_string)
+itz_add_test(test_io)
