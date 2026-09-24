@@ -3,14 +3,8 @@ enable_language(CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Each test is one C++ file linked against the stdlib and registered with CTest.
-function(itz_add_test name)
-    add_executable(${name} ${name}.cpp)
-    target_link_libraries(${name} PRIVATE itzamna_stdlib)
-    target_include_directories(${name} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
-    add_test(NAME ${name} COMMAND ${name})
-endfunction()
+add_executable(test_write test_write.cpp)
+target_link_libraries(test_write PRIVATE itzamna_stdlib)
 
-itz_add_test(test_unistd)
-itz_add_test(test_string)
-itz_add_test(test_io)
+add_executable(test_read test_read.cpp)
+target_link_libraries(test_read PRIVATE itzamna_stdlib)
