@@ -13,6 +13,12 @@ itzamna build <br/>
 cmake -B build && cmake --build build
 ```
 
+itzamna test <br/>
+
+```bash
+ctest --test-dir build --output-on-failure
+```
+
 itzamna workflow <br/>
 itzamna is not only a VM: the `itzamna` command drives the full pipeline, from building the VM to running and inspecting your payloads, without leaving the terminal. <br/>
 
