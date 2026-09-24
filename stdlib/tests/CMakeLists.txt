@@ -12,3 +12,4 @@ function(itz_add_test name)
 endfunction()
 
 itz_add_test(test_unistd)
+itz_add_test(test_string)
