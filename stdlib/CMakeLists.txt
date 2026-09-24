@@ -28,4 +28,5 @@ if(CMAKE_C_COMPILER_ID MATCHES "GNU|Clang")
     )
 endif()
 
+add_subdirectory(examples)
 add_subdirectory(tests)
